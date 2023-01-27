@@ -28,20 +28,20 @@
   status: fail
   
   - summary: |
-    А
+    Авторизация пользователя по GitHub. 8.
   status: pass
   
   - summary: |
-    А
+    Создание пользователя с Password менее 3 символов. 9. (нег.)
   status: pass
   
     - summary: |
-    А
+    Регистрация пользователя с неккоректным Email. 10. (нег.) 
   status: pass
   
     - summary: |
-    А
-  status: pass
+    Регистрация пользователя с Nickname менее 3 символов. 11. (нег.)
+  status: fail
   
     - summary: |
     А
