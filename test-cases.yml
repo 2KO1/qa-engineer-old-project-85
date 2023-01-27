@@ -1,6 +1,6 @@
 ---
 - summary: |
-    Регистрация пользователя.
+    Регистрация пользователя. 1.
   requirement: |
     Пользователь может регистрироваться. 2.1
   prerequisites: |
@@ -21,7 +21,7 @@
     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
     
 - summary: |
-    Авторизации пользователя с существующими email и password.
+    Авторизации пользователя с существующими email и password. 2.
   requirement: |
     Пользователь может авторизоваться по email и password. 2.2.1
   prerequisites: |
@@ -39,9 +39,9 @@
     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
 
 - summary: |
-    Авторизация пользователя с незарегистрированным email и password.
+    Авторизация пользователя с незарегистрированным email. 3.
   requirement: |
-    Ошибка "Email required" отображена при незаполненном поле email и попытке авторизации. 2.2.6
+    Ошибка "EMAIL_NOT_FOUND" отображена при вводе незарегистрированного email и попытке авторизации. 2.2.4
     Незарегистрированный пользователь не может авторизоваться по email и password. 2.4.4
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
@@ -56,3 +56,308 @@
   expected-result: |
     Отображена ошибка "EMAIL_NOT_FOUND" на странице раздела "Sign in" https://codebattle.hexlet.io/session/new?locale=en&next=%2F
     
+    - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
+    
+        - summary: |
+    А
+  requirement: |
+    О
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    E
+    P
+  steps:
+    - 
+    - 
+    - 
+    - 
+  expected-result: |
+    О
