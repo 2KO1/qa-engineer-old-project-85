@@ -181,21 +181,23 @@
     Отображена ошибка "Invalid email"
     
 - summary: |
-    А
+    Регистрация пользователя с Nickname менее 3 символов. 11. (нег.)
   requirement: |
-    О
+    Nikname должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
   prerequisites:
-    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/users/new?locale=en&next=%2F).
   test-data: |
-    E
-    P
+    Nickname = "W"
+    Email = "tostoroplo@mail.ru"
+    Password = "йцуqwe123"
   steps:
-    - 
-    - 
-    - 
-    - 
+    - Вводим "Nickname"
+    - Вводим "Email"
+    - Вводим "Password"
+    - Нажимаем "Submit"
   expected-result: |
-    О
+    Отображена страница (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
+    Отображена ошибка "Nickname should be at least 3 characters"
     
 - summary: |
     А
