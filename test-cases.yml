@@ -200,21 +200,19 @@
     Отображена ошибка "Nickname should be at least 3 characters"
     
 - summary: |
-    А
+    Пробная игра для незарегистрированного пользователя. 12.
   requirement: |
-    О
+    Незарегистрированный пользователь может принять участие в игре с ботом. 2.4
+    Незарегистрированный пользователь в игре отображен под "Nickname" "John Doe". 2.4.1
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
-    E
-    P
+   
   steps:
-    - 
-    - 
-    - 
-    - 
+    - Нажимаем кнопку "Try simple battle"
   expected-result: |
-    О
+    Началась пробная игра с ботом
+    Пользователь отображен под "Nickname" "John Doe"
     
 - summary: |
     А
