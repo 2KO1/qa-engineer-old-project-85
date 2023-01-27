@@ -12,16 +12,16 @@
   status: pass
   
   - summary: |
-    А
+    Авторизация пользователя с неправильным паролем. 4.
   status: pass
   
   - summary: |
-    А
+    Авторизация пользователя без ввода email и password. 5
   status: pass
   
   - summary: |
-    А
-  status: pass
+    Восстановление забытого пароля. 6.
+  status: fail
   
   - summary: |
     А
