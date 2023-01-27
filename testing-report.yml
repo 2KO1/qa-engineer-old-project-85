@@ -1,0 +1,72 @@
+---
+- summary: |
+    Регистрация пользователя. 1.
+  status: pass
+
+- summary: |
+    Авторизации пользователя с существующими email и password. 2.
+  status: pass
+  
+  - summary: |
+    Авторизация пользователя с незарегистрированным email и password. 3.
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+  - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
+  
+    - summary: |
+    А
+  status: pass
