@@ -52,21 +52,57 @@
   status: fail
   
 - summary: |
-    А
-  status: pass
+    Tooltip сообщение кнопки Invite. 14.
+  status: fail
   
 - summary: |
-    А
-  status: pass
+    Отправка сообщений в чате раздела "Tournament". 15.
+  status: fail
   
 - summary: |
-    А
-  status: pass
+    Проверка нумерации строк текстового поля раздела "Games". 16.
+  status: fail
   
 - summary: |
-    А
-  status: pass
+    Отображение сообщения в чате раздела "Games". 17.
+  status: fail
   
 - summary: |
-    А
-  status: pass
+    Отображение сообщения в чате раздела "lobby". 18.
+  status: fail
+
+- summary: |
+    О
+  status: 
+  
+- summary: |
+    О
+  status: 
+ 
+- summary: |
+    О
+  status:  
+
+- summary: |
+    О
+  status: 
+
+- summary: |
+    О
+  status: 
+
+- summary: |
+    О
+  status: 
+
+- summary: |
+    О
+  status: 
+
+- summary: |
+    О
+  status: 
+
+- summary: |
+    О
+  status: 
