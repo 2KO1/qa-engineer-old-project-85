@@ -215,21 +215,22 @@
     Пользователь отображен под "Nickname" "John Doe"
     
 - summary: |
-    А
+    Поиск пользователя для создания игры. 13.
   requirement: |
-    О
+    Поисковая строка в разделе "Create a game" - "Game type" - "With a friend" показывает более релевантные данные по мере заполнения текста. 2.5.1
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
-    E
-    P
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    Nickname = "pop"
   steps:
-    - 
-    - 
-    - 
-    - 
+    - Авторизоваться в приложении "CodeBattle"
+    - Нажать кнопку "Create a game"
+    - Выбрать "Game type" = ""With a friend"
+    - В поисковой строке "Choose opponent" ввести "pop"
   expected-result: |
-    О
+    Пользователь с Nickname = "pop" отображен в первой строке.
     
 - summary: |
     А
