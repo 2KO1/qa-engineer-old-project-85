@@ -48,8 +48,8 @@
   status: fail
   
 - summary: |
-    А
-  status: pass
+    Поиск пользователя для создания игры. 13.
+  status: fail
   
 - summary: |
     А
