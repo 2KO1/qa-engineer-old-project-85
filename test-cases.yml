@@ -142,7 +142,7 @@
     В левой части экрана отображено сообщение "Successfully authenticated"
     
 - summary: |
-    Регистрация пользователя с Password менее 3 символов. 9. (нег.)
+    Регистрация пользователя с Password менее 6 символов. 9. (нег.)
   requirement: |
     Password должен содержать не менее 6 символов русского, англисйкого языка или спецсимволов. 2.1.4
   prerequisites:
@@ -150,7 +150,7 @@
   test-data: |
     Nickname = "Walt"
     Email = "tostoroplo@mail.ru"
-    Password = "mi6v9"
+    Password = "9qwe1"
   steps:
     - Вводим "Nickname"
     - Вводим "Email"
@@ -170,7 +170,7 @@
   test-data: |
     Nickname = "Walt"
     Email = "tostoroplomail.ru"
-    Password = "mi6v9"
+    Password = "9qwe123"
   steps:
     - Вводим "Nickname"
     - Вводим некорректный "Email"
@@ -189,7 +189,7 @@
   test-data: |
     Nickname = "W"
     Email = "tostoroplo@mail.ru"
-    Password = "йцуqwe123"
+    Password = "9qwe123"
   steps:
     - Вводим "Nickname"
     - Вводим "Email"
