@@ -44,8 +44,8 @@
   status: fail
 
 - summary: |
-    О
-  status: 
+    Guide в Simple battle незарегистрированного пользователя. 12.
+  status: fail
   
 - summary: |
     О
