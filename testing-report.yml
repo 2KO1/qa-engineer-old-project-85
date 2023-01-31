@@ -68,7 +68,7 @@
   status: pass
 
 - summary: |
-    Выход из приложения во время игры и возвращение в нее. 18.
+    Закрытие только что созданной игры с другими пользователями. 18.
   status: fail
 
 - summary: |
@@ -76,5 +76,21 @@
   status: pass
 
 - summary: |
-    О
-  status: 
+    Проверка "emoji" в чате игры. 20.
+  status: fail
+
+- summary: |
+    Добровольное поражение. 21.
+  status: fail
+  
+- summary: |
+    Проверка чата игры. 22.
+  status: fail
+  
+- summary: |
+    Бездействие в игре. 23.
+  status: pass
+  
+- summary: |
+    Выход из приложения во время игры и возвращение в игру. 24.
+  status: pass
