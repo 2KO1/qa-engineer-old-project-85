@@ -21,14 +21,14 @@
     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя
     
 - summary: |
-    Авторизации пользователя с существующими email и password. 2.
+    Авторизации пользователя с существующими "email" и "password". 2.
   requirement: |
-    Пользователь может авторизоваться по email и password. 2.2.1
+    Пользователь может авторизоваться по "email" и "password". 2.2.1
   prerequisites: |
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
-    Email = "12testertester12@mail.ru"
-    Password = "123456"
+    "Email" = "12testertester12@mail.ru"
+    "Password" = "123456"
   steps:
     - Нажимаем кнопку "Sign in"
     - Вводим "Email"
@@ -39,15 +39,15 @@
     В правом верхнем углу отображены данные (аватар, Nickname) указанного пользователя.
 
 - summary: |
-    Авторизация пользователя с незарегистрированным email. 3.
+    Авторизация пользователя с незарегистрированным "email". 3.
   requirement: |
     Ошибка "EMAIL_NOT_FOUND" отображена при вводе незарегистрированного email и попытке авторизации. 2.2.4
     Незарегистрированный пользователь не может авторизоваться по email и password. 2.4.4
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
-    Email = "er12@mail.ru"
-    Password = "123456"
+    "Email" = "er12@mail.ru"
+    "Password" = "123456"
   steps:
     - Вводим "Email"
     - Вводим "Password"
@@ -56,14 +56,14 @@
     Отображена ошибка "EMAIL_NOT_FOUND" на странице раздела "Sign in" (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
     
 - summary: |
-    Авторизация пользователя с неправильным паролем. 4.
+    Авторизация пользователя с неправильным "password". 4.
   requirement: |
     Ошибка "INVALID_PASSWORD" отображена при вводе зарегистрированного email и неверного пароля, при попытке авторизации. 2.2.5
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
-    Email = "12testertester12@mail.ru"
-    Password = "1234908"
+    "Email" = "12testertester12@mail.ru"
+    "Password" = "1234908"
   steps:
     - Вводим "Email"
     - Вводим неверный "Password"
@@ -72,10 +72,10 @@
     Отображена ошибка "INVALID_PASSWORD" на странице раздела "Sign in" (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
     
 - summary: |
-    Авторизация пользователя без ввода email и password. 5
+    Авторизация пользователя без ввода "email" и "password". 5
   requirement: |
-    Ошибка "Email required" отображена при незаполненном поле email и попытке авторизации. 2.2.6
-    Ошибка "Password required" отображена при назаполненном поле password и попытке авторизации. 2.2.
+    Ошибка "Email required" отображена при незаполненном поле "email" и попытке авторизации. 2.2.6
+    Ошибка "Password required" отображена при назаполненном поле "password" и попытке авторизации. 2.2.
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
@@ -84,18 +84,18 @@
     - Нажимаем кнопку "Submit"
   expected-result: |
     Отображена страница "Sign in" (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
-    Поле ввода email выделено красным цветом, отображена ошибка "Email required"
-    Поле ввода Password выделено красным цветом, отображена ошибка "Password required"
+    Поле ввода "email" выделено красным цветом, отображена ошибка "Email required"
+    Поле ввода "Password" выделено красным цветом, отображена ошибка "Password required"
     
 - summary: |
-    Восстановление забытого пароля. 6.
+    Восстановление забытого "password". 6.
   requirement: |
-    Зарегистрированный пользователь может восстановить забытый пароль по email. 2.1.6
+    Зарегистрированный пользователь может восстановить забытый пароль по "email". 2.1.6
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
-    Email = "12testertester12@mail.ru"
-    Password(new) = "654321"
+    "Email" = "12testertester12@mail.ru"
+    "Password"(new) = "654321"
   steps:
     - Нажимаем на надпись "Forgot your password?" под полем ввода password
     - Вводим "Email"
@@ -142,15 +142,15 @@
     В левой части экрана отображено сообщение "Successfully authenticated"
     
 - summary: |
-    Регистрация пользователя с Password менее 6 символов. 9. (нег.)
+    Регистрация пользователя с "password" менее 6 символов. 9. (нег.)
   requirement: |
     Password должен содержать не менее 6 символов русского, англисйкого языка или спецсимволов. 2.1.4
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/users/new?locale=en&next=%2F).
   test-data: |
-    Nickname = "Walt"
-    Email = "tostoroplo@mail.ru"
-    Password = "9qwe1"
+    "Nickname" = "Walt"
+    "Email" = "tostoroplo@mail.ru"
+    "Password" = "9qwe1"
   steps:
     - Вводим "Nickname"
     - Вводим "Email"
@@ -161,16 +161,16 @@
     Отображена ошибка "WEAK_PASSWORD : Password should be at least 6 characters"
     
 - summary: |
-    Регистрация пользователя с неккоректным Email. 10. (нег.) 
+    Регистрация пользователя с неккоректным "email". 10. (нег.) 
   requirement: |
     Email для регистрации должен быть действительным и корректным. 2.1.3
-    Ошибка "Invalid email" отображена при недействительнои и некорректном Email при попытке регистрации/авторизации. 2.2.8
+    Ошибка "Invalid email" отображена при недействительнои и некорректном "Email" при попытке регистрации/авторизации. 2.2.8
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/users/new?locale=en&next=%2F).
   test-data: |
-    Nickname = "Walt"
-    Email = "tostoroplomail.ru"
-    Password = "9qwe123"
+    "Nickname" = "Walt"
+    "Email" = "tostoroplomail.ru"
+    "Password" = "9qwe123"
   steps:
     - Вводим "Nickname"
     - Вводим некорректный "Email"
@@ -181,15 +181,15 @@
     Отображена ошибка "Invalid email"
     
 - summary: |
-    Регистрация пользователя с Nickname менее 3 символов. 11. (нег.)
+    Регистрация пользователя с "Nickname" менее 3 символов. 11. (нег.)
   requirement: |
-    Nikname должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
+    "Nikname" должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/users/new?locale=en&next=%2F).
   test-data: |
-    Nickname = "W"
-    Email = "tostoroplo@mail.ru"
-    Password = "9qwe123"
+    "Nickname" = "W"
+    "Email" = "tostoroplo@mail.ru"
+    "Password" = "9qwe123"
   steps:
     - Вводим "Nickname"
     - Вводим "Email"
@@ -200,9 +200,10 @@
     Отображена ошибка "Nickname should be at least 3 characters"
     
 - summary: |
-    Guide в Simple battle незарегистрированного пользователя. 12.
+    "Guide" в Simple battle незарегистрированного пользователя. 12.
   requirement: |
-    
+    Незарегистрированный пользователь может просматривать "Guide" в игре с ботом. 2.4.5
+    Корректное отображение и функционал элементов интерфейса. 2.5.2
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
@@ -233,7 +234,9 @@
 - summary: |
     Просмотр истории игры 13.
   requirement: |
-    
+    Пользователь может просматривать историю игры нажатием кнопки "Open History" 2.3.29
+    Пользователю доступны настройки проигрывателя при просмотре игры. 2.3.33
+    Пользователь может скопировать ссылку истории игры при просмотре. 2.3.34
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении
@@ -272,7 +275,8 @@
 - summary: |
     Проверка победы в игре. 14.
   requirement: |
-    О
+    Во время победы в игре пользователю показывается победное модальное окно. 2.3.35
+    За победу пользователю начисляются очки. 2.3.36
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении
@@ -303,7 +307,7 @@
     - Открываем меню нажатием на "аватар"
     - Нажимаем кнопку "My Profile"
   expected-result: |
-    Отображена страница "users" профиля пользователя.
+    Отображена страница "users", профиль пользователя.
       
 - summary: |
     Проверка игрового поля. 15.
@@ -335,7 +339,7 @@
     - Нажимаем кнопку "Check solution"
     - Проверяем раздел "OUTPUT"
     - Нажимаем кнопку "Reset editor"
-    - Противник принимает поражение до завершения времени
+    - Противник  сдается до завершения времени
     - Нажимаем кнопку "x"
     - Нажимаем кнопку "Rematch"
     - Противник отклоняет предложение
