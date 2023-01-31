@@ -48,32 +48,32 @@
   status: fail
   
 - summary: |
-    О
-  status: 
+    Просмотр истории игры 13.
+  status: fail
  
 - summary: |
-    О
-  status:  
+    Проверка победы в игре. 14.
+  status: pass
 
 - summary: |
-    О
-  status: 
+    Проверка игрового поля. 15.
+  status: fail
 
 - summary: |
-    О
-  status: 
+    Рематч игры с ботом 16.
+  status: pass
 
 - summary: |
-    О
-  status: 
+    Проверка работы Vim. 17.
+  status: pass
 
 - summary: |
-    О
-  status: 
+    Выход из приложения во время игры и возвращение в нее. 18.
+  status: fail
 
 - summary: |
-    О
-  status: 
+    Перевод контента в игре. 19.
+  status: pass
 
 - summary: |
     О
