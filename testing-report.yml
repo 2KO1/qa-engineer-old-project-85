@@ -108,5 +108,5 @@
   status: fail
   
 - summary: |
-    В. 2.
-  status: pass
+    Отправка сообщений в окно обратной связи "Send feedback" в игре. 28.
+  status: fail
