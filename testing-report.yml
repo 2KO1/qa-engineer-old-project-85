@@ -104,8 +104,8 @@
   status: fail
   
 - summary: |
-    В. 2.
-  status: pass
+    Tooltip сообщение кнопки Invite. 27. 
+  status: fail
   
 - summary: |
     В. 2.
