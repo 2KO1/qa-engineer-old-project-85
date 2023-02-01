@@ -240,12 +240,11 @@
     Пользователь может скопировать ссылку истории игры при просмотре. 2.3.34
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "3"
     Выбираем "Game Type" = "With other users"
     Выбираем "Time control" = "60"
@@ -280,12 +279,11 @@
     За победу пользователю начисляются очки. 2.3.36
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "1"
     Выбираем "Game Type" = "With a bot"
     Выбираем "Time control" = "8"
@@ -318,11 +316,11 @@
     Игровое текстовое поле принимает символы русского/английского языка и спецсимволы. 2.6.18
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
+    Авторизоваться в приложении "CodeBattle"
+    Начинаем создание игры выбрав казанные настройки
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "2"
     Выбираем "Game Type" = "With a friend"
     Выбираем "Time control" = "3"
@@ -331,8 +329,7 @@
     Язык программирования "dart"
     "текст" = "тест123_test456!@# $%^&*()"test_тест" [34679]{}"
   steps:
-    - Выбираем тестируемые параметры создания игры
-    - В поисковую строку "Choose opponent" прописываем "nickname" противника
+    - В окне создания игры в поисковую строку "Choose opponent" прописываем "nickname" противника
     - Выбираем противника
     - Создаем игру нажатием кнопки "create invite"
     - В "Select" языка программирования выбираем интересующий язык
@@ -358,19 +355,24 @@
     "Rematch" игры запускает новую игру с настройками предыдушей, с тем же противником. 2.6.20
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с ботом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
-    Выбираем "level" = "3"
-    Выбираем "Game Type" = "With a bot"
-    Выбираем "Time control" = "3"
-    Выбираем "Tags" = "math, collections"
-    Выбираем "Task" = "prime_array"
+    "level" = "3"
+    "Game Type" = "With a bot"
+    "Time control" = "3"
+    "Tags" = "math, collections"
+    "Task" = "prime_array"
     Язык программирования "Elixir"
   steps:
+    - Нажимаем кнопку "Create a game"
+    - Выбираем "level"
+    - Выбираем "Game Type"
+    - Выбираем "Time control"
+    - Выбираем "Tags" 
+    - Выбираем "Task"
     - В "Select" языка программирования выбираем интересующий язык
     - Записываем правильный вариант решения задачи
     - Нажимаем кнопку "x"
@@ -384,12 +386,11 @@
     Во время игры можно использовать текстовый редактор "Vim" 2.6.1
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с ботом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "2"
     Выбираем "Game Type" = "With a bot"
     Выбираем "Time control" = "60"
@@ -416,12 +417,11 @@
     Игру "Game type" = "with other users" можно отменить, до присоединения к ней противника. 2.6.21
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другими пользователями
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "4"
     Выбираем "Game Type" = "With other users"
     Выбираем "Time control" = "8"
@@ -430,7 +430,7 @@
   steps:
     - После создания игры нажимаем на кнопку "х" рядом с кнопкой "Continue"
     - Заново создаем игру с такими же параметрами
-    - Противник подключается
+    - Ожидаем подключение противника
     - В "Select" языка программирования выбираем интересующий язык
   expected-result: |
     Отображена игра с выбранными параметрами.
@@ -442,19 +442,17 @@
     Во время игры можно выбрать язык программирования для решения задачи. 2.6.3
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другими пользователями
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "2"
     Выбираем "Game Type" = "With other users"
     Выбираем "Time control" = "8"
     Выбираем "Tags" = "strings, hash-maps, collections, rest"
     Язык программирования "Java"
   steps:
-    - Противник подключается
     - В "Select" языка программирования выбираем интересующий язык
     - Проверяем отображение контента и интерфейса на русском
     - Нажимаем на "Select" выбора отображения языка
@@ -473,12 +471,11 @@
     Корректное отображение и функционал элементов интерфейса. 2.5.2
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "3"
     Выбираем "Game Type" = "With friend"
     Выбираем "Time control" = "8"
@@ -508,12 +505,11 @@
     После победы/поражения в игре пользователю показывается победное модальное окно. 2.3.35
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с ботом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "4"
     Выбираем "Game Type" = "With a bot"
     Выбираем "Time control" = "3"
@@ -535,12 +531,11 @@
     В игре присутствует чат доступный как для игроков, так и для зрителей. 2.6.5
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "4"
     Выбираем "Game Type" = "With a friend"
     Выбираем "Time control" = "60"
@@ -568,19 +563,17 @@
     Игра завершенная по истечении времени, при выходе из нее игроков не отображается в истории завершенных игр. 2.6.11.1
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другими пользователями
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "1"
     Выбираем "Game Type" = "With other users"
     Выбираем "Time control" = "3"
     Выбираем "Tags" = "collections, rest"
     Язык программирования "Ruby"
   steps:
-    - Противник подключается
     - В "Select" языка программирования выбираем интересующий язык
     - Ждем завершения таймера
     - Нажимаем кнопку "Back  to home"
@@ -596,19 +589,17 @@
     Пользователь может во время игры выходить из приложения с последующим возвращением в игру, до ее завершения. 2.6.10
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении
-    Создать игру с другом
+    Авторизоваться в приложении "CodeBattle"
+    Создать игру/"Create a game"
   test-data: |
     Login = "12testertester12@mail.ru"
     Password = "123456"
-    Нажимаем кнопку "Create a game"
     Выбираем "level" = "1"
     Выбираем "Game Type" = "With a friend"
     Выбираем "Time control" = "60"
     Выбираем "Tags" = "collections, hash-maps"
     Язык программирования "Typescript"
   steps:
-    - Противник подключается
     - В "Select" языка программирования выбираем интересующий язык
     - Нажимаем кнопку "Codebattle by Hexlet's community"
     - Открываем меню нажатием на "аватар"
@@ -627,12 +618,12 @@
     Сообщения отправляются путем написания текста в текстовое поле чата и нажатии кнопки клавиатуры "Enter"/нажатия на кнопку чата "Send". 2.5
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/tournaments).
+    Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
     Сообщение = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
   steps:
-    - Авторизоваться в приложении "CodeBattle"
     - Перейти на страницу "tournaments"
     - Нажать на кнопку "Show" рядом с любым турниром
     - Написать сообщение в текстовое поле чата
@@ -649,12 +640,12 @@
     Сообщения отправляются путем написания текста в текстовое поле чата и нажатии кнопки клавиатуры "Enter"/нажатия на кнопку чата "Send". 2.5
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
     Сообщение = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
   steps:
-    - Авторизоваться в приложении "CodeBattle"
     - Нажать на текстовое поле чата главной страницы "lobby"
     - Написать сообщение в текстовое поле чата
     - Нажать кнопку "Send"
@@ -670,12 +661,83 @@
     Tooltip сообщение кнопки "Invite" должно скрываться при отведении курсора с кнопки или tooltip сообщения. 2.5
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Нажать на кнопку "Invites" на главной странице приложения
+    - Отвести курсор в сторону
+  expected-result: |
+    При отведении курсора в сторону от кнопки "Invite" tooltip сообщение не отображается.
+
+- summary: |
+    Отправка сообщений в окно обратной связи "Send feedback" в игре. 28.
+  requirement: |
+    Пользователю доступна отбравка обратной связи в окно "Send feedback" в "Slack" сообщество разработчиков. 2.5.3
+    Окно обратной связи разделено на 3 категории - "Bug"/"Improvement"/"Feature". 2.5.4
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении
+    Создать игру/"Create a game"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    Сообщение = "test1Тест2!)."
+  steps:
+    - Нажать на кнопку "Send Feedback" в правом нижнем углу экрана
+    - Ввести сообщение в раздел "Bug"
+    - Нажать кнопку "Send Fedback"
+    - Ввести сообщение в раздел "Improvement"
+    - Нажать кнопку "Send Fedback"
+    - Ввести сообщение в раздел "Feature"
+    - Нажать кнопку "Send Fedback"
+    - Нажать кнопку "Close"
+  expected-result: |
+    Все сообщения обратной связи отправлены и доставлены.
+    Отображена ранее созданная игра.
+    
+- summary: |
+    Проверка отображения списка лидеров "User rating". 29.
+  requirement: |
+    T
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
   steps:
     - Авторизоваться в приложении "CodeBattle"
-    - Нажать на кнопку "Invites" на главной странице приложения
-    - Отвести курсор в сторону
+    - Нажать на кнопку 
   expected-result: |
-    При отведении курсора в сторону от кнопки "Invite" tooltip сообщение не отображается.
+    П
+    
+- summary: |
+    T
+  requirement: |
+    T
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Авторизоваться в приложении "CodeBattle"
+    - Нажать на кнопку 
+  expected-result: |
+    П
+    
+- summary: |
+    T 
+  requirement: |
+    T
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Авторизоваться в приложении "CodeBattle"
+    - Нажать на кнопку
+  expected-result: |
+    П
