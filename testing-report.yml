@@ -94,3 +94,19 @@
 - summary: |
     Выход из приложения во время игры и возвращение в игру. 24.
   status: pass
+  
+- summary: |
+    Отправка сообщений в чате раздела "Tournament". 25.
+  status: fail
+  
+- summary: |
+    Отправка сообщения в чате раздела "lobby". 26.
+  status: fail
+  
+- summary: |
+    В. 2.
+  status: pass
+  
+- summary: |
+    В. 2.
+  status: pass
