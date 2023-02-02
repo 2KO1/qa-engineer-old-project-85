@@ -845,4 +845,4 @@
     - Убираем галочку из "Checkbox" = "With bots"
     - Нажимаем кнопку "Codebattle by Hexlet's community"
   expected-result: |
-    В углу странице отображен новый "Nickname".
+    Отображена главная страница приложения "Codebattle"
