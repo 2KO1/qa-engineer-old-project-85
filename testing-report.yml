@@ -126,3 +126,15 @@
 - summary: |
     Самостоятельная отмена приглашения. 32. 
   status: fail
+  
+- summary: |
+    Профиль пользователя. 33.  
+  status: fail
+  
+- summary: |
+    Смена "Nickname". 34. 
+  status: pass
+
+- summary: |
+    Переключение пользовательского рейтинга. 35.
+  status: fail
