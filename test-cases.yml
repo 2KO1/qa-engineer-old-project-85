@@ -978,14 +978,12 @@
     Email = "test1test1.88@mail.ru"
     Password = "123456"
     "Name" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
-    "Level" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
+    "Level" = "easy"
+    "Visibility" = "hidden"
     "Tags" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
     "Examples in markdown" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
     "Description en" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
     "Description ru" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
-    "Asserts JSON list of objects" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
-    "Input_signature" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
-    "Output_signature" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
   steps:
     - Открываем меню нажатием на "аватар"
     - Нажимаем кнопку "Tasks"
@@ -994,20 +992,18 @@
     - Нажимаем кнопку "Create new task"
     - Вводим "Name"
     - Выбираем "Level"
+    - Выбираем "Visibility"
     - Вводим "Tags"
     - Вводим "Examples in markdown"
     - Вводим "Description en"
     - Вводим "Description ru"
-    - Вводим "Asserts JSON list of objects"
-    - Вводим "Input_signature"
-    - Вводим "Output_signature"
     - Нажимаем кнопку "Save"
     - Нажимаем кнопку "Show" рядом с созданным ранее заданием
   expected-result: |
     Отображено созданное нами задание.
     
 - summary: |
-    Создание пакета заданий. 42.
+    Создание сборника заданий. 42.
   requirement: |
     Пользователю доступна страница сборник заданий 2.3.22
     Пользователь может просматривать сборник заданий. 2.3.23
@@ -1018,6 +1014,9 @@
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
+    "Name" = "!?.,/()Абй :;}_{[]-+=>QwertY123456  7<""
+    "Visibility" = "hidden"
+    "Task_ids" = "1"
   steps:
     - Открываем меню нажатием на "аватар"
     - Нажимаем кнопку "Tasks"
@@ -1042,14 +1041,12 @@
     Email = "test1test1.88@mail.ru"
     Password = "123456"
     "Name" = "1"
-    "Level" = "й"
+    "Level" = "easy"
+    "Visibility" = "public"
     "Tags" = "e"
     "Examples in markdown" = "ТЕСТ"
     "Description en" = "TEST"
     "Description ru" = "Текст"
-    "Asserts JSON list of objects" = "0"
-    "Input_signature" = "teст1"
-    "Output_signature" = "9"
   steps:
     - Открываем меню нажатием на "аватар"
     - Нажимаем кнопку "Tasks"
@@ -1057,77 +1054,233 @@
     - Нажимаем кнопку "Edit"
     - Вводим "Name"
     - Выбираем "Level"
+    - Выбираем "Visibility"
     - Вводим "Tags"
     - Вводим "Examples in markdown"
     - Вводим "Description en"
     - Вводим "Description ru"
-    - Вводим "Asserts JSON list of objects"
-    - Вводим "Input_signature"
-    - Вводим "Output_signature"
     - Нажимаем кнопку "Save"
   expected-result: |
     Отображено сообщение "Task updated successfully."
     Отображено задание.
     
 - summary: |
-    У.
+    Редактирование сборника заданий. 44.
   requirement: |
-    Пользователь создавший турнир может удалить турнир. 2.3.27.2
-    Корректное отображение и функционал элементов интерфейса. 2.5.2
+    Пользователь может редактировать созданные сборники заданий. 2.3.24.1
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
-    Название турнира = "qiст1!"
+    "Name" = "1"
+    "Visibility" = "public"
+    "Task_ids" =  "1, 2, 3"
   steps:
     - Открываем меню нажатием на "аватар"
-    - Нажимаем кнопку "Tournaments"
-    - Нажимаем кнопку "Show" с ранее созданным нами турниром
-    - Нажимаем кнопку "Cancel"
+    - Нажимаем кнопку "Tasks"
+    - Нажимаем кнопку "Task packs"
+    - Нажимаем кнопку "Show" рядом с выбранным сборником
+    - Нажимаем кнопку "Edit"
+    - Вводим "Name"
+    - Выбираем "Visibility" в "Select"
+    - Вводим "Task_ids"
+    - Нажимаем кнопку "Save"
   expected-result: |
-    Отображена страница турниров, со списком турниров.
-    Удаленный турнир не отображается.
+    Отображено сообщение "TaskPack updated successfully."
+    Отображен созданный нами "Task pack".
     
 - summary: |
-    У.
+    Смена "Nickname" на "Nickname" менее 3х символов. 45
   requirement: |
-    Пользователь создавший турнир может удалить турнир. 2.3.27.2
-    Корректное отображение и функционал элементов интерфейса. 2.5.2
+    Пользователь может менять свой Nikname. 2.3.2
+    Nikname должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
-    Название турнира = "qiст1!"
+    Nickname = "1q"
   steps:
     - Открываем меню нажатием на "аватар"
-    - Нажимаем кнопку "Tournaments"
-    - Нажимаем кнопку "Show" с ранее созданным нами турниром
-    - Нажимаем кнопку "Cancel"
+    - Нажимаем кнопку "Settings"
+    - В текстовое поле "Your name" вводим новый "Nickname"
+    - Нажимаем кнопку "Save"
   expected-result: |
-    Отображена страница турниров, со списком турниров.
-    Удаленный турнир не отображается.
+    Отображена ошибка "Should be at least 3 characters"
+    Изменения не вступили в силу
     
 - summary: |
-    У.
+    Смена "Nickname" на "Nickname" без символов. 46
   requirement: |
-    Пользователь создавший турнир может удалить турнир. 2.3.27.2
-    Корректное отображение и функционал элементов интерфейса. 2.5.2
+    Пользователь может менять свой Nikname. 2.3.2
+    Nikname должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
-    Название турнира = "qiст1!"
   steps:
     - Открываем меню нажатием на "аватар"
-    - Нажимаем кнопку "Tournaments"
-    - Нажимаем кнопку "Show" с ранее созданным нами турниром
-    - Нажимаем кнопку "Cancel"
+    - Нажимаем кнопку "Settings"
+    - Из текстового поля "Your name" удаляем текущий "Nickname" 
+    - Нажимаем кнопку "Save"
   expected-result: |
-    Отображена страница турниров, со списком турниров.
-    Удаленный турнир не отображается.
+    Отображена ошибка "Field can't be empty"
+    Изменения не вступили в силу
+    
+- summary: |
+    Создание задания с существующим названием. 47.
+  requirement: |
+    "Name" задания должен быть уникальным. 2.3.21.2
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать задание с "Name" = "1"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "Name" = "1"
+    "Level" = "easy"
+    "Visibility" = "hidden"
+    "Tags" = "1"
+    "Examples in markdown" = "1"
+    "Description en" = "1"
+    "Description ru" = "1"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tasks"
+    - Нажимаем кнопку "Show" рядом с заданием
+    - Нажимаем кнопку "Back"
+    - Нажимаем кнопку "Create new task"
+    - Вводим "Name"
+    - Выбираем "Level"
+    - Выбираем "Visibility"
+    - Вводим "Tags"
+    - Вводим "Examples in markdown"
+    - Вводим "Description en"
+    - Вводим "Description ru"
+    - Нажимаем кнопку "Save"
+  expected-result: |
+    Отображено сообщение под текстовым полем "Name" - "has already been taken"
+    Изменения не вступили в силу
+    
+- summary: |
+    Смена названия созданного задания на уже существующее. 48.
+  requirement: |
+    "Name" задания должен быть уникальным. 2.3.21.2
+    Пользователь может редактировать созданные задания. 2.3.21.1
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать задание с "Name" = "test"
+    Создать задание с "Name" = "1" для последующей редакции
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "Name" = "test"
+    "Level" = "easy"
+    "Visibility" = "public"
+    "Tags" = "e"
+    "Examples in markdown" = "ТЕСТ"
+    "Description en" = "TEST"
+    "Description ru" = "Текст"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tasks"
+    - Нажимаем кнопку "Show" рядом с заданием для редации
+    - Нажимаем кнопку "Edit"
+    - Вводим "Name"
+    - Выбираем "Level"
+    - Выбираем "Visibility"
+    - Вводим "Tags"
+    - Вводим "Examples in markdown"
+    - Вводим "Description en"
+    - Вводим "Description ru"
+    - Нажимаем кнопку "Save"
+  expected-result: |
+    Отображено сообщение под текстовым полем "Name" - "has already been taken"
+    Изменения не вступили в силу
+    
+- summary: |
+    Смена "Nickname" на используемый "Nickname". 49
+  requirement: |
+    Пользователь может менять свой Nikname. 2.3.2
+    Nikname должен содержать минимум 3 символа, символа русского/английского языка. 2.1.2
+    Nickname должен быть уникальным. 2.1.2.1
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Зарегистрировать пользователя с "Nickname" = "kirito"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "Nickname" = "kirito"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Settings"
+    - Вводим в текстовое поле "Your name" существующий "Nickname"
+    - Нажимаем кнопку "Save"
+    - Нажимаем кнопку "Codebattle by Hexlet's community"
+  expected-result: |
+    Отображена ошибка над текстовым полем "Name" - "Your name, sould be uniq"
+    Изменения не вступили в силу
+    
+- summary: |
+    Создание сборника заданий с существующим названием. 50.
+  requirement: |
+    "Name" сборника заданий должно быть уникальным. 2.3.24.2
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать сборник заданий с "Name" = "1"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "Name" = "1"
+    "Visibility" = "hidden"
+    "Task_ids" = "1"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tasks"
+    - Нажимаем кнопку "Task packs"
+    - Нажимаем кнопку "Create new task pack"
+    - Вводим "Name"
+    - Выбираем "Visibility" в "Select"
+    - Вводим "Task_ids"
+    - Нажимаем кнопку "Save"
+  expected-result: |
+    Отображено сообщение под текстовым полем "Name" - "has already been taken"
+    Изменения не вступили в силу
+
+- summary: |
+    Смена названия созданного сборника заданий на уже существующее. 51.
+  requirement: |
+    "Name" сборника заданий должно быть уникальным. 2.3.24.2
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать сборник заданий с "Name" = "1"
+    Создать сборник заданий с "Name" = "test"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "Name" = "1"
+    "Visibility" = "public"
+    "Task_ids" =  "1, 2, 3"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tasks"
+    - Нажимаем кнопку "Task packs"
+    - Нажимаем кнопку "Show" рядом с выбранным сборником
+    - Нажимаем кнопку "Edit"
+    - Вводим "Name"
+    - Выбираем "Visibility" в "Select"
+    - Вводим "Task_ids"
+    - Нажимаем кнопку "Save"
+  expected-result: |
+    Отображено сообщение под текстовым полем "Name" - "has already been taken"
+    Изменения не вступили в силу
