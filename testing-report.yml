@@ -152,7 +152,7 @@
   status: pass
 
 - summary: |
-    Создание турнира. 39.
+    Турнир тип "team". 39.
   status: fail
   
 - summary: |
@@ -201,4 +201,24 @@
   
 - summary: |
     Смена названия созданного сборника заданий на уже существующее. 51.
+  status: pass  
+  
+- summary: |
+    Турнир тип "stairway. 52.
+  status: fail  
+  
+- summary: |
+    Турнир тип "individual". 54.
+  status: pass  
+  
+- summary: |
+    С.
+  status: pass  
+  
+- summary: |
+    С.
+  status: pass  
+  
+- summary: |
+    С.
   status: pass  
