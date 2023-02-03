@@ -164,7 +164,7 @@
   status: pass
 
 - summary: |
-    Создание пакета заданий. 42.
+    Создание сборника заданий. 42.
   status: pass
   
 - summary: |
@@ -172,5 +172,33 @@
   status: pass
   
 - summary: |
-    Р
+    Редактирование сборника заданий. 44.
   status: pass
+  
+- summary: |
+    Смена "Nickname" на "Nickname" менее 3х символов. 45
+  status: pass
+  
+- summary: |
+    Смена "Nickname" на "Nickname" без символов. 46
+  status: pass
+  
+- summary: |
+    Создание задания с существующим. 47.
+  status: pass
+  
+- summary: |
+    Смена названия созданного задания на уже существующее. 48.
+  status: pass
+  
+- summary: |
+    Смена "Nickname" на используемый "Nickname". 49
+  status: fail
+  
+- summary: |
+    Создание сборника заданий с существующим названием. 50.
+  status: pass
+  
+- summary: |
+    Смена названия созданного сборника заданий на уже существующее. 51.
+  status: pass  
