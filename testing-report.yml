@@ -205,10 +205,10 @@
   
 - summary: |
     Турнир тип "stairway. 52.
-  status: pass
+  status: fail
   
 - summary: |
-    Турнир тип "individual". 54.
+    Турнир тип "individual". 53.
   status: pass  
   
 - summary: |
