@@ -1324,84 +1324,7 @@
     Отображена страница игры.
     
 - summary: |
-    Турнир тип "stairway". 53.
-  requirement: |
-    Пользователь может создавать турниры. 2.3.27
-    Корректное отображение и функционал элементов интерфейса. 2.5.2
-  prerequisites:
-    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении "CodeBattle"
-  test-data: |
-    Email = "test1test1.88@mail.ru"
-    Password = "123456"
-    Название турнира = "скрытый турнир"
-    "Select" "Type" = "stairway"
-    "Select" "Access Type" = "token"
-    "starts at(utc)" = "сегодня"
-    "Task pack name" = "test1"
-    "Default language" = "java"
-    "Match timeout in seconds" = "100"
-  steps:
-    - Открываем меню нажатием на "аватар"
-    - Нажимаем кнопку "Tournaments"
-    - В текстовое поле "Name" вводим название турнира
-    - Выбираем "Select" "Type"
-    - Выбираем "Select" "Access Type" 
-    - Выбираем "starts at(utc)"
-    - Выбираем "Task pack name"
-    - Выбираем "Default language
-    - Прописываем "Match timeout in seconds"
-    - Нажимаем кнопку "Create"
-    - Нажимаем кнопку "Join"
-    - Нажимаем кнопку "Promote"
-    - Нажимаем кнопку "Join"
-    - Отправляем ссылку на турнир другому пользователю для подключения
-    - Ожидаем подключения
-    - Нажимаем кнопку "Start"
-  expected-result: |
-    Отображена страница игры.
-    
-- summary: |
-    Турнир тип "stairway". 52.
-  requirement: |
-    Пользователь может создавать турниры. 2.3.27
-    Корректное отображение и функционал элементов интерфейса. 2.5.2
-  prerequisites:
-    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
-    Авторизоваться в приложении "CodeBattle"
-  test-data: |
-    Email = "test1test1.88@mail.ru"
-    Password = "123456"
-    Название турнира = "скрытый турнир"
-    "Select" "Type" = "stairway"
-    "Select" "Access Type" = "token"
-    "starts at(utc)" = "сегодня"
-    "Task pack name" = "test1"
-    "Default language" = "java"
-    "Match timeout in seconds" = "100"
-  steps:
-    - Открываем меню нажатием на "аватар"
-    - Нажимаем кнопку "Tournaments"
-    - В текстовое поле "Name" вводим название турнира
-    - Выбираем "Select" "Type"
-    - Выбираем "Select" "Access Type" 
-    - Выбираем "starts at(utc)"
-    - Выбираем "Task pack name"
-    - Выбираем "Default language
-    - Прописываем "Match timeout in seconds"
-    - Нажимаем кнопку "Create"
-    - Нажимаем кнопку "Join"
-    - Нажимаем кнопку "Promote"
-    - Нажимаем кнопку "Join"
-    - Отправляем ссылку на турнир другому пользователю для подключения
-    - Ожидаем подключения
-    - Нажимаем кнопку "Start"
-    - Нажиммаем кнопку "Join"
-  expected-result: |
-    Отображена страница игры.
-    
-- summary: |
-    Турнир тип "individual". 54.
+    Турнир тип "individual". 53.
   requirement: |
     Пользователь может создавать турниры. 2.3.27
     Корректное отображение и функционал элементов интерфейса. 2.5.2
@@ -1437,3 +1360,67 @@
     - Нажиммаем кнопку "Join"
   expected-result: |
     Отображена игра турнира.
+    
+- summary: |
+    Создание турнира без названия. 54.
+  requirement: |
+    Пользователь может создавать турниры. 2.3.27
+    Корректное отображение и функционал элементов интерфейса. 2.5.2
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "starts at(utc)" = "сегодня"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tournaments"
+    - Выбираем "starts at(utc)"
+    - Нажимаем кнопку "Create"
+  expected-result: |
+    Отображено сообщение под текстовым полем "Name" - "can't be blank"
+    Отображен "tooltip" = "Заполните это поле."
+    
+- summary: |
+    Т.
+  requirement: |
+    Пользователь может создавать турниры. 2.3.27
+    Корректное отображение и функционал элементов интерфейса. 2.5.2
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    Название турнира = "скрытый турнир"
+    "Select" "Type" = "stairway"
+    "Select" "Access Type" = "token"
+    "starts at(utc)" = "сегодня"
+    "Task pack name" = "test1"
+    "Default language" = "java"
+    "Match timeout in seconds" = "100"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tournaments"
+    - В текстовое поле "Name" вводим название турнира
+    - Выбираем "Select" "Type"
+    - Выбираем "Select" "Access Type" 
+    - Выбираем "starts at(utc)"
+    - Выбираем "Task pack name"
+    - Выбираем "Default language
+    - Прописываем "Match timeout in seconds"
+    - Нажимаем кнопку "Create"
+    - Нажимаем кнопку "Join"
+    - Нажимаем кнопку "Promote"
+    - Нажимаем кнопку "Join"
+    - Отправляем ссылку на турнир другому пользователю для подключения
+    - Ожидаем подключения
+    - Нажимаем кнопку "Start"
+    - Нажиммаем кнопку "Join"
+  expected-result: |
+    Отображена страница игры.
+    
+
+    
+
