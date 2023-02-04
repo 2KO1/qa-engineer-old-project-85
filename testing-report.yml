@@ -216,8 +216,8 @@
   status: pass  
   
 - summary: |
-    С.
-  status: pass  
+    Проверка приватности турнира типа "token". 55.
+  status: fail  
   
 - summary: |
     С.
