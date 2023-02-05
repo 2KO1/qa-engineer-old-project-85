@@ -1427,23 +1427,23 @@
     Приватные игры данного турнира не отображены пользователям не участвующим в нем.
     
 - summary: |
-    Т
+    Создание турнира задним числом. 56.
   requirement: |
     Пользователь может создавать турниры.
-    Корректное отображение и функционал элементов интерфейса.
+    Турнир нельзя создавать с прошедшей датой начала турнира.
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
     Авторизоваться в приложении "CodeBattle"
   test-data: |
     Email = "test1test1.88@mail.ru"
     Password = "123456"
-    Название турнира = "скрытый турнир"
-    "Select" "Type" = "stairway"
-    "Select" "Access Type" = "token"
-    "starts at(utc)" = "сегодня"
-    "Task pack name" = "test1"
-    "Default language" = "java"
-    "Match timeout in seconds" = "100"
+    Название турнира = "...tour///"
+    "Select" "Type" = "individual"
+    "Select" "Access Type" = "public"
+    "starts at(utc)" = "7 октября 1994"
+    "Level" = "hard"
+    "Default language" = "python"
+    "Match timeout in seconds" = "500"
   steps:
     - Открываем меню нажатием на "аватар"
     - Нажимаем кнопку "Tournaments"
@@ -1451,17 +1451,138 @@
     - Выбираем "Select" "Type"
     - Выбираем "Select" "Access Type" 
     - Выбираем "starts at(utc)"
-    - Выбираем "Task pack name"
+    - Выбираем "Level"
     - Выбираем "Default language
     - Прописываем "Match timeout in seconds"
     - Нажимаем кнопку "Create"
-    - Нажимаем кнопку "Join"
-    - Нажимаем кнопку "Promote"
-    - Нажимаем кнопку "Join"
-    - Отправляем ссылку на турнир другому пользователю для подключения
-    - Ожидаем подключения
-    - Нажимаем кнопку "Start"
-    - Нажиммаем кнопку "Join"
   expected-result: |
-    Отображена страница игры.
+    Отображена ошибка.
+    Турнир не создан.
     
+- summary: |
+    Создание турнира с уже имеющимся названием. 57.
+  requirement: |
+    Пользователь может создавать турниры.
+    "Name" турнира должно быть уникальным.
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать турнир с названием "123"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    Название турнира = "123"
+    "Select" "Type" = "individual"
+    "Select" "Access Type" = "public"
+    "starts at(utc)" = "сегодня"
+    "Level" = "hard"
+    "Default language" = "python"
+    "Match timeout in seconds" = "500"
+  steps:
+    - Открываем меню нажатием на "аватар"
+    - Нажимаем кнопку "Tournaments"
+    - В текстовое поле "Name" вводим название турнира
+    - Выбираем "Select" "Type"
+    - Выбираем "Select" "Access Type" 
+    - Выбираем "starts at(utc)"
+    - Выбираем "Level"
+    - Выбираем "Default language
+    - Прописываем "Match timeout in seconds"
+    - Нажимаем кнопку "Create"
+  expected-result: |
+    Отображена ошибка.
+    Турнир не создан.
+    
+- summary: |
+    Одновременное участие в двух играх. 58.
+  requirement: |
+    Пользователь может принимать участие одновременно только в одной игре.
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Нажимаем на кнопку "Fight" рядом с ботом во вкладке "lobby" главной страницы приложения
+    - Нажимаем кнопку "Codebattle by Hexlet's community"
+    - Нажимаем на кнопку "Fight" рядом с ботом во вкладке "lobby" главной страницы приложения
+  expected-result: |
+    Отображена ошибка "already_in_a_game"
+    Игра не создана.
+    
+    
+- summary: |
+    Одновременное участие в игре турнира и обычной игре. 59.
+  requirement: |
+    Пользователь может принимать участие одновременно только в одной игре.
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать турнир
+    Вступить в список "Players"
+    Начать турнир нажатием на кнопку "Start"
+    Перейти на главную страницу приложения
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Нажимаем на кнопку "Fight" рядом с ботом во вкладке "lobby" главной страницы приложения
+  expected-result: |
+    Отображена ошибка "already_in_a_game"
+    Игра не создана.
+    
+- summary: |
+    Одновременное участие в игре турнира и принятие приглашения на игру. 60.
+  requirement: |
+    Пользователь может принимать участие одновременно только в одной игре.
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать турнир
+    Вступить в список "Players"
+    Начать турнир нажатием на кнопку "Start"
+    Перейти на главную страницу приложения
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+  steps:
+    - Нажимаем на кнопку "Invite"
+    - Нажимаем на кнопку "Accept"
+  expected-result: |
+    Отображена ошибка "already_in_a_game"
+    Игра не создана.
+    
+- summary: |
+    Одновременное участие в обычной игре и игре турнира. 61.
+  requirement: |
+    Пользователь может принимать участие одновременно только в одной игре.
+  prerequisites:
+    Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
+    Авторизоваться в приложении "CodeBattle"
+    Создать турнир
+  test-data: |
+    Email = "test1test1.88@mail.ru"
+    Password = "123456"
+    "level" = "3"
+    "game type" = "With a friend"
+    "choose opponent" = "pop"
+    "time control" = "60"
+  steps:
+    - Нажимаем на кнопку "Create a game"
+    - Выбираем "level"
+    - Выбираем "game type"
+    - Вводим "Nickname" противника
+    - Нажимаем на "Nickname" противника
+    - Выбираем "time control"
+    - Нажимаем кнопку "Create invite"
+    - Ждем согласия противника
+    - Нажимаем на аватар
+    - Нажимаем на кнопку "Tournaments"
+    - Нажимаем кнопку "Show" у ранее созданного туринра
+    - Нажимаем кнопку "Join"
+    - Запускаем турнир
+    - Нажимаем кнопку "Join"
+  expected-result: |
+    Отображена ошибка "already_in_a_game"
+    Игра не создана.
