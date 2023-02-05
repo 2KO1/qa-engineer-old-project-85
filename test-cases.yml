@@ -497,7 +497,6 @@
   expected-result: |
     Отображена страница "tournaments" со списком турниров.
     
-
 - summary: |
     Добровольное поражение. 21.
   requirement: |
