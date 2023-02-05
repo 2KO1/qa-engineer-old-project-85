@@ -55,6 +55,7 @@
   expected-result: |
     Отображена ошибка "EMAIL_NOT_FOUND" на странице раздела "Sign in" (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
     
+  
 - summary: |
     Авторизация пользователя с неправильным "password". 4.
   requirement: |
