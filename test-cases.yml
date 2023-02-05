@@ -79,7 +79,7 @@
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/session/new?locale=en&next=%2Fremind_password).
   test-data: |
-    
+    -
   steps:
     - Нажимаем кнопку "Submit"
   expected-result: |
@@ -208,7 +208,7 @@
   prerequisites:
     Перейти на страницу веб-приложения "CodeBattle" по ссылке (https://codebattle.hexlet.io/).
   test-data: |
-   
+    -
   steps:
     - Нажимаем кнопку "Try simple battle"
     - Проверяем контент загрузочного экрана
